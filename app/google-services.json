@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1086431675262",
+    "firebase_url": "https://hinhnen-aaff7.firebaseio.com",
+    "project_id": "hinhnen-aaff7",
+    "storage_bucket": "hinhnen-aaff7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086431675262:android:525a2dfabad66aa68c292f",
+        "android_client_info": {
+          "package_name": "com.example.hinhnen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086431675262-fitftqo5idrmhh2ns6qlv9po2ttvsp14.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hinhnen",
+            "certificate_hash": "c046e6d2a2d595784b87817f382fff52cb1faf70"
+          }
+        },
+        {
+          "client_id": "1086431675262-diinvvjf0gnl3uf704b5r0i7gv5gkiif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUnFk2fgIFQU2CF_REWQkxmJ5FCa2M664"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086431675262-diinvvjf0gnl3uf704b5r0i7gv5gkiif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -67,7 +67,7 @@ public class SliderImage_Adapter extends PagerAdapter {
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         // container chính là ViewPager, còn Object chính là return của instantiateItem ứng với position
-        views.remove(position, object);
+        views.remove(position);
         container.removeView((View) object);
     }
 }

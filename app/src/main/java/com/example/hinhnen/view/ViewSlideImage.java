@@ -19,6 +19,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -67,11 +68,20 @@ public class ViewSlideImage extends AppCompatActivity {
         datLamHinhNen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                WallpaperManager manager = WallpaperManager.getInstance(ViewSlideImage.this);
+                DisplayMetrics metrics = new DisplayMetrics();
+                getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                int height = metrics.heightPixels;
+                int width = metrics.widthPixels;
+
                 BitmapDrawable drawable = (BitmapDrawable) getDrawable();
                 Bitmap bitmap = drawable.getBitmap();
+                Bitmap bitmapScale = Bitmap.createScaledBitmap(bitmap, width, height, true);
+
+                WallpaperManager wallpaperManager = WallpaperManager.getInstance(ViewSlideImage.this);
+                wallpaperManager.setWallpaperOffsetSteps(1, 1);
+                wallpaperManager.suggestDesiredDimensions(width, height);
                 try {
-                    manager.setBitmap(bitmap);
+                    wallpaperManager.setBitmap(bitmapScale);
                     Toast.makeText(ViewSlideImage.this, "Completed", Toast.LENGTH_SHORT).show();
                     adapter.notifyDataSetChanged();
                 } catch (IOException e) {
